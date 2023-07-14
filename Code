@@ -1,6 +1,115 @@
+class ATPSystem:
+
+def _init_(self):
+
+    self.accepted_payment_methods = ["cash", "cheque", "DD", "pay order"]
 
 
 
+def process_payment(self, voucher):
+
+    print("ATP: Payment initiated.")
+
+    self.display_prompts()
+
+
+
+    payment_mode = self.get_payment_mode()
+
+
+
+    if payment_mode == "cash":
+
+        self.process_cash_payment()
+
+    elif payment_mode == "cheque":
+
+        self.process_cheque_payment()
+
+    elif payment_mode == "DD":
+
+        self.process_DD_payment()
+
+    elif payment_mode == "pay order":
+
+        self.process_pay_order_payment()
+
+    else:
+
+        print("ATP: Invalid payment mode.")
+
+
+
+    print("ATP: Payment processed successfully.")
+
+    self.generate_acknowledgment()
+
+
+
+def display_prompts(self):
+
+    print("ATP: Follow the prompts on the touchscreen for payment instructions.")
+
+
+
+def get_payment_mode(self):
+
+    return input("ATP: Select payment mode (cash/cheque/DD/pay order): ").lower()
+
+
+
+def process_cash_payment(self):
+
+    amount = float(input("ATP: Enter the payment amount in cash: "))
+
+    # Perform cash handling operations
+
+    print("ATP: Cash payment of", amount, "processed.")
+
+
+
+def process_cheque_payment(self):
+
+    cheque_number = input("ATP: Enter the cheque number: ")
+
+    amount = float(input("ATP: Enter the payment amount on the cheque: "))
+
+    # Perform cheque processing operations
+
+    print("ATP: Cheque payment of", amount, "with cheque number", cheque_number, "processed.")
+
+
+
+def process_DD_payment(self):
+
+    dd_number = input("ATP: Enter the DD number: ")
+
+    amount = float(input("ATP: Enter the payment amount on the DD: "))
+
+    # Perform DD processing operations
+
+    print("ATP: Demand draft payment of", amount, "with DD number", dd_number, "processed.")
+
+
+
+def process_pay_order_payment(self):
+
+    amount = float(input("ATP: Enter the payment amount on the pay order: "))
+
+    # Perform pay order processing operations
+
+    print("ATP: Pay order payment of", amount, "processed.")
+
+
+
+def generate_acknowledgment(self):
+
+    print("ATP: Acknowledgment generated for the payment")
+
+#example
+atp=ATPsystem()
+voucher="123456"
+atp.process_payment(voucher)
 
 
 
